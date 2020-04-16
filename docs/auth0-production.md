@@ -1,18 +1,18 @@
 # Setting up Auth0 for now.sh (production)
 
 In order for Auth0 to recognize the app running on a production url
-running on now.sh, you will need to make a small change to the app you
-created in the first step.
+running on now.sh, you will need to make a small change to the Auth0
+configuration you did to get set up on `localhost`.
 
 Navigate back to the settings page of the app you created in the Auth0
 dashboard.
 
 To do this:
 
-* return to the web interface of <https://auth0.com/> and login
-* click on `Applications` in the side menu
-* select your application
-* go to the second tab for `Settings`
+- return to the web interface of <https://auth0.com/> and login
+- click on `Applications` in the side menu
+- select your application
+- go to the second tab for `Settings`
 
 Your production url is something of the form
 
@@ -32,25 +32,28 @@ For every field that references `http://localhost:3000`:
 - It is important you include **both** `localhost` **and** production urls so that both your localhost and production apps will work properly.
 
 For example, if your production url is `https://cs48-cgaucho-lab00.now.sh`,
-your fields should now look like this.  
+your fields should now look like this.
 
 Allowed Callback URLs:
+
 ```
-http://localhost:3000/auth0_callback, https://cs48-cgaucho-lab00.now.sh/api/callback
+http://localhost:3000/api/callback, https://cs48-cgaucho-lab00.now.sh/api/callback
 ```
 
 Allowed Logout URLs:
+
 ```
 http://localhost:3000, https://cs48-cgaucho-lab00.now.sh
 ```
 
 Notes:
-* Be sure that the `localhost` values use `http` but the `now.sh` values use `https`
-* Don't just copy the above values; replace `https://cs48-cgaucho-lab00.now.sh` with the link to your own
+
+- Be sure that the `localhost` values use `http` but the `now.sh` values use `https`
+- Don't just copy the above values; replace `https://cs48-cgaucho-lab00.now.sh` with the link to your own
   deployment of the production app.
 
 Don't forget to scroll down and click `Save Changes` at the bottom of the page.
 
 # Next step
 
-Return to [README.md](../README.md) 
+Return to [README.md](../README.md)

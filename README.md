@@ -59,14 +59,16 @@ for Github Actions. That process is explained here: [docs/auth0-github-actions.m
 ## Deploying to now.sh for the first time
 
 To deploy this app, you will need a [zeit.co account](https://zeit.co/signup).
-* Signup for an account before proceeding.  We recommend using your GitHub credentials to login
+
+- Signup for an account before proceeding. We recommend using your GitHub credentials to login
 
 Run `npx now login` (in this directory) to login to your account.
-* When asked for an email, if you used GitHub to sign in to zeit.co, you should use the same email that is the 
+
+- When asked for an email, if you used GitHub to sign in to zeit.co, you should use the same email that is the
   primary email on your GitHub account.
-* When signing in for the first time, you'll be asked to confirm your email.  Be sure that you can 
+- When signing in for the first time, you'll be asked to confirm your email. Be sure that you can
   get access to read an email sent to the email address that you typed it.
-  
+
 To deploy your project, run `npx now --prod`. The first time you run this command, you will be prompted with a
 series of questions.
 
@@ -89,6 +91,15 @@ You will also have to make a small modification to your Auth0 configuration. Fol
 app for OAuth.
 
 Then, test whether your application works on the production URL.
+
+# Deployment on Heroku (optional)
+
+We recommend deployment on `now.sh` for next.js apps. However, there may be some reasons to prefer Heroku to `now.sh:
+
+- You may want to use a Postgres SQL database (provided free with Heroku, up to 10,000 rows)
+- Perhaps you just prefer Heroku because you have prior experience with it
+
+If you do want to proceed with Heroku, you may follow the instructions in this file: [docs/heroku.md](./docs/heroku.md)
 
 # The value of `SESSION_COOKIE_SECRET`
 
